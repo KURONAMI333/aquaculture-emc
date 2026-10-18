@@ -10,7 +10,7 @@ Fillets are the delicate part. Aquaculture's fillet recipe is a custom recipe ty
 
 The junk is priced against what it becomes, so that smelting or crafting it never drags a vanilla value down: fish bones at the three bone meal they make, a tin can at the seven iron nuggets it yields, driftwood at four oak planks.
 
-Neptunium is the endgame metal and appears as loot rather than ore. The ingot, block and nugget round-trip at 1:9:81 so none of the three is a cheaper source than the others, and Neptune's Bounty is worth less than the eight ingots it takes to craft it, so there is no free loot.
+Neptunium is the endgame metal and appears as loot rather than ore. The ingot, block and nugget round-trip at 1:9:81 so none of the three is a cheaper source than the others, and Neptune's Bounty is worth exactly the eight ingots it is crafted from, so opening one is not a way to gain EMC.
 
 ## What is deliberately left out
 

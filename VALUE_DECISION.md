@@ -41,7 +41,8 @@ The value table and the reason for every number live in `tools/generate_emc.py`
    from the Neptune's Bounty loot box and from blasting neptunium gear. The ingot is 4608
    (9 × 512), so the block (41472) and the nugget (512) round-trip at 1:9:81 with no cheaper
    direction, and the nugget is above the gold nugget (227). 4608 is below diamond's 8192.
-   `neptunes_bounty` is derived from 8 ingots and stays under it.
+   `neptunes_bounty` is derived from its 8-ingot recipe, so it is worth exactly what it
+   costs to craft (36864) and opening one is EMC-neutral rather than a source of EMC.
 7. **Gear is not written.** ProjectE gives crafted tools, rods, knives, bows and armour their
    own value. A hand value would be a second definition.
 8. **A fish with no fillet is priced as food or as its other use.** The three turtles are 64
@@ -109,5 +110,6 @@ the brewing recipes above name the cause.
 - Aquaculture's leech and jellyfish are catchable and have no EMC. That is rule 10: their
   only use that reaches a vanilla item is brewing, and valuing them below the potion they
   brew would deflate it. A player who wants EMC for them can brew instead.
-- Neptune's Bounty is worth less than the 8 ingots it costs, so opening one is a small loss
-  in EMC terms. That is deliberate: the box is a fishing reward, not an EMC source.
+- Neptune's Bounty is worth exactly the 8 ingots it is crafted from (36864), so opening one
+  neither gains nor loses EMC. That is deliberate: the box is a fishing reward, not an EMC
+  source.
