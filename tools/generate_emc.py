@@ -7,12 +7,13 @@
 
 The value table below is the single source for both cells; no id differs between them.
 
-Only primitives are written here: items that no recipe makes (fish, fishing junk). Every
-fish mount, hook, fishing line, tackle box, turtle soup, neptunium block/nugget and the
-neptunium tools, armour and bows is a product of a vanilla-shaped recipe, so ProjectE
-derives them. Fish fillets come from FishFilletRecipe (a CustomRecipe, which ProjectE does
-not map), so fish_fillet_raw is written here and cooked_fish_fillet / sushi are derived
-from it.
+Only primitives are written here: items that no recipe makes (fish, fishing junk). Fish
+mounts, hooks, fishing lines and tackle boxes are crafted from vanilla materials, so
+ProjectE already values them without this add-on; the products that need this table are
+the derived fish_fillet_cooked, sushi, turtle_soup, neptunes_bounty, the neptunium block
+and nugget, and the 12 neptunium tools, armour, rods, knives and bows. Fish fillets come
+from FishFilletRecipe (a CustomRecipe, which ProjectE does not map), so fish_fillet_raw is
+written here and fish_fillet_cooked / sushi are derived from it.
 
 Deliberately NOT valued (no line below):
 - box / lockbox / treasure_chest: right-click opens them and spends the item, and the
@@ -97,13 +98,13 @@ VALUES = [
                             "down), so the fillet must stay at or below 64 / 5 = 12"),
     # Metal. The Neptunium ingot is only obtained from the Neptune's Bounty loot box and from
     # blasting neptunium tools, so it is set here as the root of the metal.
-    ("neptunium_ingot", 4608, "endgame loot metal, above iron (256) and diamond (8192) is too "
-                              "much; 4608 = 9 x 512 so ingot, block (41472) and nugget (512) "
-                              "round-trip exactly, and 512 > 227 gold nugget"),
+    ("neptunium_ingot", 4608, "endgame loot metal, far above iron (256) and still below "
+                              "diamond (8192); 4608 = 9 x 512 so ingot, block (41472) and "
+                              "nugget (512) round-trip exactly, and 512 > 227 gold nugget"),
 ]
 
 
-def entries(cell: str) -> list[tuple[str, int]]:
+def entries() -> list[tuple[str, int]]:
     return [(s, v) for s, v, _ in VALUES]
 
 
@@ -114,7 +115,7 @@ def nf_doc() -> dict:
         "values": {
             "before": [
                 {"type": "projecte:item", "emc_value": v, "id": f"aquaculture:{s}"}
-                for s, v in entries("nf")
+                for s, v in entries()
             ]
         },
     }
@@ -124,7 +125,7 @@ def forge_doc() -> dict:
     return {
         "comment": "EMC for Aquaculture 2 (Forge 1.20.1, ProjectE PE1.0.1). "
                    "Hand-set primitives only; ProjectE derives the rest from recipes.",
-        "values": {"before": {f"aquaculture:{s}": v for s, v in entries("forge")}},
+        "values": {"before": {f"aquaculture:{s}": v for s, v in entries()}},
     }
 
 
@@ -162,7 +163,10 @@ def check() -> list[str]:
         got = int(n * 1.25)
         if table[fish] < got * fr:
             errors.append(f"{fish}: {table[fish]} < {got} fillets x {fr}")
-    # Vanilla fish are filleted by the same recipe at their ProjectE values (64 each).
+    # Vanilla fish are filleted by the same recipe at their ProjectE values (64 each). These
+    # counts are the fixed ones, valid while Aquaculture's `randomWeight` config is false
+    # (the default); with randomWeight = true the count comes from the fish's weight instead,
+    # so cod is not always 4.
     for item, n in (("minecraft:cod", 4), ("minecraft:salmon", 2), ("minecraft:pufferfish", 1)):
         if 64 < int(n * 1.25) * fr:
             errors.append(f"{item}: vanilla fish value 64 < {int(n * 1.25)} fillets x {fr}")
@@ -185,15 +189,15 @@ def main() -> None:
         print("\n".join(errors))
         sys.exit(1)
     if args.check:
-        print(f"ok: {len(entries('nf'))} ids in both cells")
+        print(f"ok: {len(entries())} ids in both cells")
         return
     write(OUT_NF, nf_doc())
     write(OUT_FORGE, forge_doc())
     for path in (OUT_NF, OUT_FORGE):
         with open(path, encoding="utf-8") as f:
             json.load(f)
-    print(f"wrote {len(entries('nf'))} ids -> {os.path.relpath(OUT_NF, ROOT)}")
-    print(f"wrote {len(entries('forge'))} ids -> {os.path.relpath(OUT_FORGE, ROOT)}")
+    print(f"wrote {len(entries())} ids -> {os.path.relpath(OUT_NF, ROOT)}")
+    print(f"wrote {len(entries())} ids -> {os.path.relpath(OUT_FORGE, ROOT)}")
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ displayName="EMC for Aquaculture 2"
 authors="KURONAMI"
 displayURL="https://github.com/KURONAMI333/aquaculture-emc"
 description='''
-Adds ProjectE EMC values to Aquaculture 2's fish, fillets and fishing junk; everything crafted from them is derived by ProjectE. Loot boxes, the worm, the six dead hook assets and the fish that brew vanilla potions are intentionally left out. Requires ProjectE and Aquaculture 2.
+Adds ProjectE EMC values to Aquaculture 2's fish, fillets, fishing junk and neptunium ingot, which have no recipe ProjectE can read. From them it derives the cooked fillet, sushi, turtle soup, Neptune's Bounty, the neptunium block and nugget and the neptunium gear; mounts, hooks, fishing lines and tackle boxes are already valued from vanilla materials. Loot boxes, the worm, the six dead hook assets and the fish that brew vanilla potions are intentionally left out. Requires ProjectE and Aquaculture 2.
 '''
 
 [[dependencies.aquaculture_emc]]

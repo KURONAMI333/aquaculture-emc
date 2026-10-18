@@ -20,10 +20,13 @@ The value table and the reason for every number live in `tools/generate_emc.py`
 1. **One table, both cells.** 39 ids are written by hand and every one of them has the same
    value on NeoForge 1.21.1 and Forge 1.20.1. The survey of both host jars returns the same
    classification for every id, so there is nothing to branch on.
-2. **Only primitives are written.** Nothing that a recipe makes is listed: fish mounts,
-   hooks, fishing lines, tackle boxes, turtle soup, sushi, the neptunium block and nugget,
-   and the neptunium tools, armour and bows are all left to ProjectE's CraftingMapper
-   (18 of them resolve at runtime).
+2. **Only primitives are written.** Nothing that a recipe makes is listed. Fish mounts,
+   hooks, fishing lines and tackle boxes are crafted from vanilla materials, so ProjectE
+   already values them without this add-on (add-on-absent dump: `iron_hook` 112,
+   `fishing_line` 304, `tackle_box` 3650, `oak_fish_mount` 152). The products that resolve
+   only because of this table are the 18 grounded in the primitives below:
+   `fish_fillet_cooked`, `sushi`, `turtle_soup`, `neptunes_bounty`, the `neptunium_block`
+   and `neptunium_nugget`, and the 12 neptunium tools, armour, rods, knives and bows.
 3. **The raw fillet is written because ProjectE cannot derive it.** `FishFilletRecipe`
    extends `CustomRecipe`, and ProjectE's `CraftingMapper` skips `recipe.isSpecial()`
    recipes, so `fish_fillet_raw` is a primitive here and `fish_fillet_cooked` and `sushi`
@@ -42,7 +45,9 @@ The value table and the reason for every number live in `tools/generate_emc.py`
    (9 × 512), so the block (41472) and the nugget (512) round-trip at 1:9:81 with no cheaper
    direction, and the nugget is above the gold nugget (227). 4608 is below diamond's 8192.
    `neptunes_bounty` is derived from its 8-ingot recipe, so it is worth exactly what it
-   costs to craft (36864) and opening one is EMC-neutral rather than a source of EMC.
+   costs to craft (36864). Opening one never returns more than that: the best single
+   outcome is the neptunium chestplate at 36864, and the expected haul is about 15477
+   (42% of the craft cost), so the box is a fishing reward rather than a source of EMC.
 7. **Gear is not written.** ProjectE gives crafted tools, rods, knives, bows and armour their
    own value. A hand value would be a second definition.
 8. **A fish with no fillet is priced as food or as its other use.** The three turtles are 64
@@ -110,6 +115,9 @@ the brewing recipes above name the cause.
 - Aquaculture's leech and jellyfish are catchable and have no EMC. That is rule 10: their
   only use that reaches a vanilla item is brewing, and valuing them below the potion they
   brew would deflate it. A player who wants EMC for them can brew instead.
-- Neptune's Bounty is worth exactly the 8 ingots it is crafted from (36864), so opening one
-  neither gains nor loses EMC. That is deliberate: the box is a fishing reward, not an EMC
-  source.
+- Neptune's Bounty is worth exactly the 8 ingots it is crafted from (36864), and opening
+  one never returns more than that. Its loot pool (one roll, 13 entries: the ingot at
+  weight 2, each of the 12 neptunium gear items at weight 1) plus the two junk rolls
+  average about 15477 EMC, 42% of the craft cost; the best single outcome is the
+  neptunium chestplate at 36864. That is deliberate: the box is a fishing reward, not an
+  EMC source.
