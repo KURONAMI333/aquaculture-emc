@@ -1,0 +1,202 @@
+{
+  "comment": "EMC for Aquaculture 2 (NeoForge 1.21.1, ProjectE PE1.1.0). Hand-set primitives only; ProjectE derives the rest from recipes.",
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 16,
+        "id": "aquaculture:minnow"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 24,
+        "id": "aquaculture:atlantic_herring"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 24,
+        "id": "aquaculture:synodontis"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 24,
+        "id": "aquaculture:bluegill"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 32,
+        "id": "aquaculture:boulti"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 32,
+        "id": "aquaculture:perch"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 32,
+        "id": "aquaculture:piranha"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 48,
+        "id": "aquaculture:blackfish"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:pink_salmon"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:rainbow_trout"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:brown_trout"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:carp"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:smallmouth_bass"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:pollock"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:box_turtle"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "aquaculture:starshell_turtle"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 96,
+        "id": "aquaculture:muskellunge"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 96,
+        "id": "aquaculture:red_grouper"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 96,
+        "id": "aquaculture:tambaqui"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 128,
+        "id": "aquaculture:bayad"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 128,
+        "id": "aquaculture:gar"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 128,
+        "id": "aquaculture:arrau_turtle"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 192,
+        "id": "aquaculture:atlantic_cod"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 192,
+        "id": "aquaculture:catfish"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 256,
+        "id": "aquaculture:capitaine"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 256,
+        "id": "aquaculture:arapaima"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 384,
+        "id": "aquaculture:pacific_halibut"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 448,
+        "id": "aquaculture:atlantic_halibut"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 512,
+        "id": "aquaculture:tuna"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 160,
+        "id": "aquaculture:brown_shrooma"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 160,
+        "id": "aquaculture:red_shrooma"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 227,
+        "id": "aquaculture:goldfish"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 8,
+        "id": "aquaculture:algae"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 32,
+        "id": "aquaculture:driftwood"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 144,
+        "id": "aquaculture:fish_bones"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 196,
+        "id": "aquaculture:tin_can"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 8,
+        "id": "aquaculture:message_in_a_bottle"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 12,
+        "id": "aquaculture:fish_fillet_raw"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4608,
+        "id": "aquaculture:neptunium_ingot"
+      }
+    ]
+  }
+}

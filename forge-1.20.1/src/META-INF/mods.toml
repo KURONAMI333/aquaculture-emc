@@ -1,0 +1,41 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="aquaculture_emc"
+version="0.1.0"
+displayName="EMC for Aquaculture 2"
+authors="KURONAMI"
+displayURL="https://github.com/KURONAMI333/aquaculture-emc"
+description='''
+Adds ProjectE EMC values to Aquaculture 2's fish, fillets and fishing junk; everything crafted from them is derived by ProjectE. Fish that can be opened or composted into more value are intentionally left out. Requires ProjectE and Aquaculture 2.
+'''
+
+[[dependencies.aquaculture_emc]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.aquaculture_emc]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.aquaculture_emc]]
+    modId="projecte"
+    mandatory=true
+    versionRange="[1.0.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.aquaculture_emc]]
+    modId="aquaculture"
+    mandatory=true
+    versionRange="[2.5.7,)"
+    ordering="AFTER"
+    side="BOTH"

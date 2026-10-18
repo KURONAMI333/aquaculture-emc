@@ -1,0 +1,7 @@
+build/
+.gradle/
+run/
+repo/
+*.hprof
+__pycache__/
+forge-1.20.1/build/
